@@ -3,28 +3,28 @@ git_source(:github) { |repo| "https://github.com/ghosteathuman/#{repo}.git" }
 
 ruby File.read(".ruby-version").strip
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+# Full-stack web application framework. (https://rubyonrails.org)
 gem "rails", "~> 7.0.4"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+# Sprockets Rails integration (https://github.com/rails/sprockets-rails)
 gem "sprockets-rails"
 
-# Use postgresql as the database for Active Record
+# Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem "pg", "~> 1.1"
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+# Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+gem "puma", "~> 6.0"
 
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
+# Bundle and transpile JavaScript in Rails with esbuild, rollup.js, or Webpack. (https://github.com/rails/jsbundling-rails)
 gem "jsbundling-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# The speed of a single-page web application without having to write any JavaScript. (https://github.com/hotwired/turbo-rails)
 gem "turbo-rails"
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
 gem "stimulus-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+# Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
@@ -36,11 +36,17 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+# Timezone Data for TZInfo (https://tzinfo.github.io)
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
-# Reduces boot times through caching; required in config/boot.rb
+# Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem "bootsnap", require: false
+
+# Integrate Tailwind CSS with the asset pipeline in Rails. (https://github.com/rails/tailwindcss-rails)
+gem "tailwindcss-rails", "~> 2.0"
+
+# A framework for building view components with a Ruby DSL. (https://www.phlex.fun)
+gem "phlex"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -49,12 +55,18 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # Debugging functionality for Ruby (https://github.com/ruby/debug)
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
+  gem "brakeman"
+  # Minitest + all the features you always wanted (https://github.com/grosser/maxitest)
+  gem "maxitest"
+  # Ruby Style Guide, with linter & automatic code fixer (https://github.com/testdouble/standard)
+  gem "standard"
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
+  # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -65,8 +77,10 @@ group :development do
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem "capybara"
+  # Selenium is a browser automation tool for automated testing of webapps and more (https://selenium.dev)
   gem "selenium-webdriver"
+  # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
   gem "webdrivers"
 end
