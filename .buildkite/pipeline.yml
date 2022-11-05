@@ -1,0 +1,9 @@
+steps:
+  - label: "Setup"
+    command: bundle install
+
+  - label: "Brakeman"
+    command: bundle exec brakeman
+
+  - label: "Lint"
+    command: bundle exec standardrb
