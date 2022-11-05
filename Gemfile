@@ -37,7 +37,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem "bootsnap", require: false
@@ -50,7 +50,11 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
+  gem "brakeman"
+  # Ruby Style Guide, with linter & automatic code fixer (https://github.com/testdouble/standard)
+  gem "standard"
 end
 
 group :development do
