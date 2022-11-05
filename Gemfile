@@ -53,6 +53,8 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
   gem "brakeman"
+  # Minitest + all the features you always wanted (https://github.com/grosser/maxitest)
+  gem "maxitest"
   # Ruby Style Guide, with linter & automatic code fixer (https://github.com/testdouble/standard)
   gem "standard"
 end
