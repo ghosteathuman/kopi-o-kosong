@@ -36,5 +36,3 @@ jobs:
     - name: Standard
       run: |
         bundle exec standardrb
-
-
