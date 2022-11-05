@@ -42,6 +42,9 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem "bootsnap", require: false
 
+# Integrate Tailwind CSS with the asset pipeline in Rails. (https://github.com/rails/tailwindcss-rails)
+gem "tailwindcss-rails", "~> 2.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
