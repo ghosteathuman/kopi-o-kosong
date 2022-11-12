@@ -84,3 +84,5 @@ group :test do
   # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
   gem "webdrivers"
 end
+
+gem "rodauth-rails", "~> 1.6"
