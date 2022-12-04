@@ -1,4 +1,5 @@
 class Identity::EmailsController < ApplicationController
+  before_action :require_sudo
   before_action :set_user
 
   def edit

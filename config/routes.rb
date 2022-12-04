@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  namespace :sessions do
+    resource :sudo, only: [:new, :create]
+  end
+  namespace :two_factor_authentication do
+    resource :challenge, only: [:new, :create]
+    resource :totp,      only: [:new, :create]
+  end
+  get  '/auth/failure',            to: 'sessions/omniauth#failure'
+  get  '/auth/:provider/callback', to: 'sessions/omniauth#create'
+  post '/auth/:provider/callback', to: 'sessions/omniauth#create'
   get  'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create'
   get  'sign_up', to: 'registrations#new'

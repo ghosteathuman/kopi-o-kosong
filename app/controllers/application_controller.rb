@@ -2,6 +2,12 @@ class ApplicationController < ActionController::Base
   before_action :set_current_request_details
   before_action :authenticate
 
+  def require_sudo
+    unless Current.session.sudo?
+      redirect_to new_sessions_sudo_path(proceed_to_url: request.url)
+    end
+  end
+
   private
     def authenticate
       if session = Session.find_by_id(cookies.signed[:session_token])
