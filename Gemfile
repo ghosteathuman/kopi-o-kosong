@@ -33,8 +33,8 @@ gem "jbuilder"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+# OpenBSD's bcrypt() password hashing algorithm. (https://github.com/bcrypt-ruby/bcrypt-ruby)
+gem "bcrypt", "~> 3.1.7"
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
