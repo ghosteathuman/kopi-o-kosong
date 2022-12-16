@@ -60,6 +60,8 @@ group :development, :test do
   gem "maxitest"
   # Ruby Style Guide, with linter & automatic code fixer (https://github.com/testdouble/standard)
   gem "standard"
+  # ERB lint tool (https://github.com/Shopify/erb-lint)
+  gem "erb_lint"
 end
 
 group :development do
