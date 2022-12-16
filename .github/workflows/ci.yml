@@ -43,3 +43,6 @@ jobs:
     - name: Standard
       run: |
         bundle exec standardrb
+    - name: Erblint
+      run: |
+         bundle exec erblint --lint-all

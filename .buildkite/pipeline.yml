@@ -7,3 +7,6 @@ steps:
 
   - label: "Lint"
     command: bundle exec standardrb
+
+  - label: "ERB Lint"
+    command: bundle exec erblint --lint-all
