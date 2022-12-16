@@ -45,9 +45,6 @@ gem "bootsnap", require: false
 # Integrate Tailwind CSS with the asset pipeline in Rails. (https://github.com/rails/tailwindcss-rails)
 gem "tailwindcss-rails", "~> 2.0"
 
-# A framework for building view components with a Ruby DSL. (https://www.phlex.fun)
-gem "phlex"
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 
