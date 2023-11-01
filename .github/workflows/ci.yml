@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: CI
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    services:
+      postgres:
+        image: postgres:16.0-alpine
+        env:
+          POSTGRES_PASSWORD: kopi_o_kosong
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Install Ruby Dependencies
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Brakeman
+      run: |
+        bundle exec brakeman
+    - name: Standard
+      run: |
+        bundle exec standardrb
