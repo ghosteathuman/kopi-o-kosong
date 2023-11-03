@@ -1,3 +1,5 @@
+name: Build Container Image
+
 on:
   workflow_call:
     inputs:
