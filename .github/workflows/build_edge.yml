@@ -1,4 +1,4 @@
-name: Build edge container image
+name: Build Edge Container Image
 on:
   push:
     branches:
@@ -12,7 +12,6 @@ jobs:
   build-image:
     uses: ./.github/workflows/build_container_image.yml
     with:
-      platforms: linux/amd64
       cache: false
       tags: |
         type=edge,branch=main
