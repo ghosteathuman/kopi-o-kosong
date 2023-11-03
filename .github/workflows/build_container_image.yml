@@ -27,7 +27,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHA_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: docker/metadata-action@v5
         id: meta
@@ -40,6 +40,7 @@ jobs:
           context: .
           provenance: false
           builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64
           push: ${{ inputs.image != '' }}
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: ${{ inputs.cache }}
