@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build-image:
-    uses: ./.github/workflows/build-container-image.yml
+    uses: ./.github/workflows/build_container_image.yml
     with:
       platforms: linux/amd64
       cache: false
