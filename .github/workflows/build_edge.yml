@@ -1,0 +1,20 @@
+name: Build edge container image
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-image:
+    uses: ./.github/workflows/build-container-image.yml
+    with:
+      platforms: linux/amd64
+      cache: false
+      tags: |
+        type=edge,branch=main
+        type=sha
+    secrets: inherit
