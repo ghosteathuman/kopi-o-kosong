@@ -12,7 +12,7 @@ jobs:
       RAILS_ENV: test
     services:
       postgres:
-        image: postgres:16.0-alpine
+        image: postgres:16.1-alpine
         env:
           POSTGRES_PASSWORD: kopi-o-kosong
         options: >-
