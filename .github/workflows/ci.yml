@@ -36,3 +36,6 @@ jobs:
     - name: Standard
       run: |
         bundle exec standardrb
+    - name: Test
+      run: |
+        bundle exec rails test:all
