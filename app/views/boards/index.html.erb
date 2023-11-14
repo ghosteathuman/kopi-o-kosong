@@ -1,0 +1,26 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div>
+    <h1 class="text-center font-bold text-3xl">Boards</h1>
+  </div>
+
+  <div id="boards" class="min-w-full flex justify-center flex-wrap gap-4 py-8">
+    <% @boards.each do |board| %>
+      <%= render partial: "card", locals: { board: board } %>
+    <% end %>
+  </div>
+
+  <div class="flex justify-center">
+    <%= link_to new_board_path, data: { turbo_frame: dom_id(Board.new) } do %>
+      <div class="board-card">
+        <p class="py-3">Add a new board</p>
+        <%= image_tag "plus-circle.svg", class: "h-10 w-10 m-auto" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= turbo_frame_tag Board.new %>
+</div>
