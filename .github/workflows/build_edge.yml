@@ -13,6 +13,9 @@ jobs:
     uses: ./.github/workflows/build_container_image.yml
     with:
       cache: false
+      images: |
+        ghcr.io/ghosteathuman/kopi-o-kosong
+        ghosteathuman/kopi-o-kosong
       tags: |
         type=edge,branch=main
         type=sha,prefix=

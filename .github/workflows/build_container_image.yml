@@ -6,9 +6,8 @@ on:
       cache:
         type: boolean
         default: true
-      image:
+      images:
         type: string
-        default: ghcr.io/ghosteathuman/kopi-o-kosong
       tags:
         type: string
 
@@ -25,12 +24,14 @@ jobs:
         id: buildx
 
       - name: Login to Docker Hub
+        if: contains(inputs.images, 'ghosteathuman')
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Log in to the Github Container registry
+        if: contains(inputs.images, 'ghcr.io')
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -40,7 +41,7 @@ jobs:
       - uses: docker/metadata-action@v5
         id: meta
         with:
-          images: ${{ inputs.image }}
+          images: ${{ inputs.images }}
           tags: ${{ inputs.tags }}
 
       - uses: docker/build-push-action@v5
@@ -49,7 +50,7 @@ jobs:
           provenance: false
           builder: ${{ steps.buildx.outputs.name }}
           platforms: linux/amd64
-          push: ${{ inputs.image != '' }}
+          push: ${{ inputs.images != '' }}
           tags: ${{ steps.meta.outputs.tags }}
-          cache-from: ${{ inputs.cache }}
-          cache-to: ${{ inputs.cache }}
+          cache-from: ${{ inputs.cache && 'type=gha' || '' }}
+          cache-to: ${{ inputs.cache && 'type=gha,mode=max' || '' }}
