@@ -12,9 +12,9 @@ jobs:
       RAILS_ENV: test
     services:
       postgres:
-        image: postgres:16.0-alpine
+        image: postgres:16.1-alpine
         env:
-          POSTGRES_PASSWORD: kopi_o_kosong
+          POSTGRES_PASSWORD: kopi-o-kosong
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -36,3 +36,8 @@ jobs:
     - name: Standard
       run: |
         bundle exec standardrb
+    - name: Test
+      run: |
+        bundle exec rails db:create
+        bundle exec rails db:schema:load
+        bundle exec rails test:all
