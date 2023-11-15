@@ -1,0 +1,5 @@
+<%= turbo_stream.prepend "boards" do %>
+  <%= render partial: "boards/card", locals: { board: @board } %>
+<% end %>
+
+<%= turbo_stream.update Board.new, "" %>
