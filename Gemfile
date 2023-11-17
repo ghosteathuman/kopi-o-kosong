@@ -55,6 +55,8 @@ group :development do
   gem "noncommittal"
   # Ruby Style Guide, with linter & automatic code fixer (https://github.com/testdouble/standard)
   gem "standard"
+  # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema. (https://github.com/ctran/annotate_models)
+  gem "annotate"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

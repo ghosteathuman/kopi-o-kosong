@@ -1,9 +1,25 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: boards
+#
+#  id         :bigint           not null, primary key
+#  public     :boolean          default(FALSE)
+#  title      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  url_id     :string           not null
+#
+# Indexes
+#
+#  index_boards_on_url_id  (url_id)
+#
 
 one:
   title: MyString
   public: false
+  url_id: url_id_one
 
 two:
   title: MyString
   public: false
+  url_id: url_id_two
