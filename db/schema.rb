@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_05_182825) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_17_140159) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_05_182825) do
     t.boolean "public", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "url_id", null: false
+    t.index ["url_id"], name: "index_boards_on_url_id"
   end
 
 end
