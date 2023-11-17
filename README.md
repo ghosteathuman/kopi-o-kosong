@@ -9,6 +9,7 @@ This project is not intended for production use as it lacks common features such
 ***
 
 ![CI](https://github.com/ghosteathuman/kopi-o-kosong/actions/workflows/ci.yml/badge.svg)
+[![Build status](https://badge.buildkite.com/81a6bf08b5d10e5e79365f8ec58685d341243df1476a1797b8.svg)](https://buildkite.com/ghosteathuman/kopi-o-kosong)
 
 Things you may want to cover:
 
