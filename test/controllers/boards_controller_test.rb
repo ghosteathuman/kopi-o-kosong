@@ -24,23 +24,23 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show board" do
-    get board_url(@board)
+    get board_url(@board.url_id)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_board_url(@board)
+    get edit_board_url(@board.url_id)
     assert_response :success
   end
 
   test "should update board" do
     patch board_url(@board), params: {board: {public: @board.public, title: @board.title}}
-    assert_redirected_to board_url(@board)
+    assert_redirected_to board_url(@board.url_id)
   end
 
   test "should destroy board" do
     assert_difference("Board.count", -1) do
-      delete board_url(@board)
+      delete board_url(@board.url_id)
     end
 
     assert_redirected_to boards_url
