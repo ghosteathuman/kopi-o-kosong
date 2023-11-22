@@ -57,6 +57,8 @@ group :development do
   gem "standard"
   # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema. (https://github.com/ctran/annotate_models)
   gem "annotate"
+  # ERB Linter tool. (https://github.com/Shopify/erb-lint)
+  gem "erb_lint", require: false
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
