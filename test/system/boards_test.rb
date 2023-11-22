@@ -22,7 +22,7 @@ class BoardsTest < ApplicationSystemTestCase
   end
 
   test "should update Board" do
-    visit board_url(@board)
+    visit board_url(@board.url_id)
     click_on "Edit this board", match: :first
 
     check "Public" if @board.public
@@ -34,7 +34,7 @@ class BoardsTest < ApplicationSystemTestCase
   end
 
   test "should destroy Board" do
-    visit board_url(@board)
+    visit board_url(@board.url_id)
     click_on "Destroy this board", match: :first
 
     assert_text "Board was successfully destroyed"

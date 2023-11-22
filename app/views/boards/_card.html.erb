@@ -1,5 +1,5 @@
 <div id="<%= dom_id board %>">
-  <%= link_to board, class: "board-card" do %>
+  <%= link_to board_path(board.url_id), class: "board-card" do %>
     <p class="my-5">
       <%= board.title %>
     </p>
