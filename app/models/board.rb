@@ -16,6 +16,8 @@
 class Board < ApplicationRecord
   after_initialize :set_url_id
 
+  has_many :columns, dependent: :delete_all
+
   scope :ordered, -> { order(id: :desc) }
 
   private
