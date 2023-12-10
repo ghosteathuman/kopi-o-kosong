@@ -19,4 +19,6 @@
 #
 class Column < ApplicationRecord
   belongs_to :board
+
+  scope :ordered, -> { order(position: :asc) }
 end

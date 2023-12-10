@@ -26,6 +26,9 @@ class BoardsController < ApplicationController
 
     if @board.save
       # redirect_to @board, notice: "Board was successfully created."
+      Column.create(title: "To Do", position: 0, board_id: @board.id)
+      Column.create(title: "In Progress", position: 1, board_id: @board.id)
+      Column.create(title: "Done", position: 2, board_id: @board.id)
       respond_to do |format|
         format.html { redirect_to boards_path, notice: "Board was successfully created." }
         format.turbo_stream

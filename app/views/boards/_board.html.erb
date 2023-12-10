@@ -9,6 +9,10 @@
     <%= board.public %>
   </p>
 
+  <% @board.columns.ordered.each do |column| %>
+    <%= render column %>
+  <% end %>
+
   <% if action_name != "show" %>
     <%= link_to "Show this board", board_path(board.url_id), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to "Edit this board", edit_board_path(board.url_id),
