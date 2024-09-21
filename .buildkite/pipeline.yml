@@ -1,4 +1,7 @@
 steps:
+  - label: "Check Ruby Version"
+    command: ruby --version
+
   - label: "Setup"
     command: bundle install
 
