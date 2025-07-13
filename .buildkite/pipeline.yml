@@ -1,4 +1,7 @@
 steps:
+  - label: "Check Directory"
+    command: pwd
+
   - label: "Check Ruby Version"
     command: ruby --version
 
