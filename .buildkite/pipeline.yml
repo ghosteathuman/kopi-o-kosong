@@ -1,13 +1,4 @@
 steps:
-  - label: "Check Directory"
-    command: pwd
-
-  - label: "Check rbenv Version"
-    command: rbenv version
-
-  - label: "Check Ruby Version"
-    command: ruby --version
-
   - label: "Setup"
     command: bundle install
 
