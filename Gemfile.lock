@@ -163,7 +163,7 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     public_suffix (5.0.4)
     puma (6.4.0)
@@ -208,7 +208,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
-    rdoc (6.6.0)
+    rdoc (6.6.3.1)
       psych (>= 4.0.0)
     regexp_parser (2.8.2)
     reline (0.4.0)
@@ -251,7 +251,7 @@ GEM
       rubocop-performance (~> 1.19.1)
     stimulus-rails (1.3.0)
       railties (>= 6.0.0)
-    stringio (3.0.9)
+    stringio (3.1.0)
     tailwindcss-rails (2.0.32-aarch64-linux)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.32-arm64-darwin)
